@@ -1,12 +1,14 @@
 import './ExpenseItem.css';
 
-function ExpenseItem() {
+function ExpenseItem({ date, description, price }) {
+    const formattedDate = date.toLocaleString('en-US', {month: 'long', day: '2-digit', year: 'numeric'});
+
     return (
         <div className="expense-item">
-            <div>March 24th 2024</div>
+            <div>{formattedDate}</div>
             <div className="expense-item__description">
-                <h2>Expense item</h2>
-                <div className="expense-item__price">$ 12.00</div>
+                <h2>{description}</h2>
+                <div className="expense-item__price">$ {price}</div>
             </div>
         </div>
     );
