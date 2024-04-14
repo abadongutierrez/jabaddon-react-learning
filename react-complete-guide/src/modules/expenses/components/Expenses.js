@@ -2,7 +2,8 @@ import ExpenseItem from './ExpenseItem';
 import Card from '../../common/components/Card';
 import './Expenses.css';
 
-function Expenses({ expenses }) {
+// using arrow functions
+const Expenses = ({ expenses }) => {
   return (
     <Card className="expenses">
       {expenses.map((expenseItem) => 
