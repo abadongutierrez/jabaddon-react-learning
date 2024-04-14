@@ -1,10 +1,10 @@
-import './App.css';
-import ExpenseItem from './modules/expenses/components/ExpenseItem';
+
+import Expenses from './modules/expenses/components/Expenses';
 
 function App() {
   const expenses = [
     {
-      date: new Date(2024, 1, 1),
+      date: new Date(2024, 3, 12),
       description: 'Description 1',
       price: 12.01
     },
@@ -15,11 +15,9 @@ function App() {
     }
   ];
   return (
-    <div className="App">
-      <div>
-        {expenses.map((e) => 
-            <ExpenseItem date={e.date} description={e.description} price={e.price} />)}
-      </div>
+    <div>
+      <h2>Let's get started</h2>
+      <Expenses expenses={expenses} />
     </div>
   );
 }
